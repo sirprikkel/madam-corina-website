@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Madam CORINA — Mystieke waarzegster voor uw evenement. Handlijnlezen, theelezen, tarot en animaties. Boek voor feesten, markten en bedrijfsevents.">
+  <title>Madam CORINA — Waarzegster & Mystieke Ervaringen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="03cb43d6-4e2f-4b84-89a7-b53842b485e1"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'mystic-bg': '#0D0A1A',
+            'mystic-dark': '#160D2A',
+            'mystic-card': '#1E1230',
+            'mystic-purple': '#7C3AED',
+            'mystic-purple-light': '#A78BFA',
+            'mystic-gold': '#CA8A04',
+            'mystic-gold-light': '#FDE68A',
+            'mystic-text': '#E8E0F0',
+            'mystic-muted': '#9D8FB5',
+          },
+          fontFamily: {
+            'display': ['"Playfair Display"', 'serif'],
+            'body': ['Poppins', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Playfair Display', serif; }
+
+    body { background: #0D0A1A; color: #E8E0F0; }
+
+    /* Mist / fog hero effect */
+    .mist-layer {
+      position: absolute; inset: 0; pointer-events: none; z-index: 1;
+      background: 
+        radial-gradient(ellipse 80% 40% at 50% 80%, rgba(124,58,237,0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 30% at 30% 60%, rgba(13,10,26,0.8) 0%, transparent 80%),
+        radial-gradient(ellipse 60% 30% at 70% 50%, rgba(13,10,26,0.7) 0%, transparent 80%);
+      animation: mistFloat 12s ease-in-out infinite alternate;
+    }
+    .mist-layer-2 {
+      position: absolute; inset: 0; pointer-events: none; z-index: 2;
+      background: 
+        radial-gradient(ellipse 100% 50% at 50% 100%, rgba(13,10,26,0.9) 0%, transparent 60%);
+    }
+    @keyframes mistFloat {
+      0% { opacity: 0.7; transform: translateY(0px) scale(1); }
+      100% { opacity: 1; transform: translateY(-8px) scale(1.02); }
+    }
+
+    /* Stars */
+    .stars {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.8) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 10%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 10% 70%, rgba(255,255,255,0.7) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 80%, rgba(255,255,255,0.4) 0%, transparent 100%),
+        radial-gradient(2px 2px at 35% 15%, rgba(253,230,138,0.6) 0%, transparent 100%),
+        radial-gradient(1px 1px at 65% 25%, rgba(255,255,255,0.5) 0%, transparent 100%),
+        radial-gradient(1px 1px at 45% 65%, rgba(255,255,255,0.6) 0%, transparent 100%),
+        radial-gradient(2px 2px at 75% 45%, rgba(253,230,138,0.4) 0%, transparent 100%);
+    }
+
+    /* Candle glow on cards */
+    .glow-card {
+      background: linear-gradient(135deg, #1E1230, #160D2A);
+      border: 1px solid rgba(124,58,237,0.3);
+      box-shadow: 0 0 20px rgba(124,58,237,0.1), inset 0 1px 0 rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+    .glow-card:hover {
+      border-color: rgba(202,138,4,0.5);
+      box-shadow: 0 0 30px rgba(202,138,4,0.15), 0 0 60px rgba(124,58,237,0.1), inset 0 1px 0 rgba(255,255,255,0.08);
+      transform: translateY(-3px);
+    }
+
+    /* Gold divider */
+    .gold-divider {
+      width: 60px; height: 2px;
+      background: linear-gradient(90deg, transparent, #CA8A04, transparent);
+      margin: 1rem auto;
+    }
+
+    /* CTA Button */
+    .btn-mystic {
+      background: linear-gradient(135deg, #7C3AED, #9D5BF0);
+      color: white; padding: 14px 32px; border-radius: 4px;
+      font-weight: 600; letter-spacing: 0.05em; cursor: pointer;
+      border: 1px solid rgba(167,139,250,0.4);
+      box-shadow: 0 0 20px rgba(124,58,237,0.4);
+      transition: all 0.3s ease;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-mystic:hover {
+      box-shadow: 0 0 30px rgba(124,58,237,0.6), 0 0 60px rgba(124,58,237,0.2);
+      transform: translateY(-2px);
+    }
+    .btn-gold {
+      background: transparent; color: #FDE68A; padding: 14px 32px; border-radius: 4px;
+      font-weight: 600; letter-spacing: 0.05em; cursor: pointer;
+      border: 1px solid rgba(202,138,4,0.6);
+      transition: all 0.3s ease; text-decoration: none; display: inline-block;
+    }
+    .btn-gold:hover {
+      background: rgba(202,138,4,0.1);
+      box-shadow: 0 0 20px rgba(202,138,4,0.2);
+    }
+
+    /* Navbar */
+    .navbar { background: rgba(13,10,26,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(124,58,237,0.2); }
+
+    /* Section fade-in */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Hamburger */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    /* Lightbox */
+    #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-mystic-bg text-mystic-text">
+
+  <!-- NAVBAR -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-display text-xl font-bold text-mystic-gold-light tracking-wide">
+        Madam <span class="text-mystic-purple-light">CORINA</span>
+      </a>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-body">
+        <a href="index.html" class="text-mystic-text hover:text-mystic-gold-light transition-colors cursor-pointer">Home</a>
+        <a href="diensten.html" class="text-mystic-text hover:text-mystic-gold-light transition-colors cursor-pointer">Diensten</a>
+        <a href="galerij.html" class="text-mystic-text hover:text-mystic-gold-light transition-colors cursor-pointer">Galerij</a>
+        <a href="contact.html" class="btn-mystic text-sm py-2 px-5">Boek een optreden</a>
+      </div>
+      <!-- Mobile hamburger -->
+      <button id="hamburger" class="md:hidden cursor-pointer p-2" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <svg class="w-6 h-6 text-mystic-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden px-6 pb-4 border-t border-mystic-purple/20 bg-mystic-bg">
+      <a href="index.html" class="block py-3 text-mystic-text hover:text-mystic-gold-light cursor-pointer">Home</a>
+      <a href="diensten.html" class="block py-3 text-mystic-text hover:text-mystic-gold-light cursor-pointer">Diensten</a>
+      <a href="galerij.html" class="block py-3 text-mystic-text hover:text-mystic-gold-light cursor-pointer">Galerij</a>
+      <a href="contact.html" class="block py-3 text-mystic-gold-light font-semibold cursor-pointer">Boek een optreden</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <!-- Hero background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="images/madam-corine.jpg" alt="Madam Corina" class="w-full h-full object-cover object-top opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-b from-mystic-bg/60 via-mystic-bg/30 to-mystic-bg"></div>
+    </div>
+    <div class="stars"></div>
+    <div class="mist-layer"></div>
+    <div class="mist-layer-2"></div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <p class="text-mystic-gold text-sm font-body tracking-[0.3em] uppercase mb-4 opacity-80">✦ Mystieke Ervaringen ✦</p>
+      <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
+        Madam <span class="text-mystic-purple-light italic">CORINA</span>
+      </h1>
+      <div class="gold-divider"></div>
+      <p class="font-display text-xl md:text-2xl italic text-mystic-gold-light mt-4 mb-6">Waarzegster — met passie voor alle evenementen</p>
+      <p class="font-body text-mystic-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+        Welkom bij Madam CORINA, dé plek voor mensen die op zoek zijn naar helderheid en inzicht. Laat je leiden door een ervaren waarzegster en ontdek wat de toekomst voor jou in petto heeft.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="btn-mystic">Boek Madam CORINA</a>
+        <a href="diensten.html" class="btn-gold">Bekijk de diensten</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-mystic-purple-light opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- OVER MADAM CORINA -->
+  <section class="py-24 px-6 fade-in">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <div class="absolute -inset-2 bg-mystic-purple/10 rounded-lg blur-xl"></div>
+        <img src="images/corina-waarzegster.jpg" alt="Madam Corina — Waarzegster" class="relative rounded-lg w-full object-cover shadow-2xl border border-mystic-purple/20" style="max-height: 520px; object-fit: cover;">
+      </div>
+      <div>
+        <p class="text-mystic-gold text-xs tracking-[0.3em] uppercase mb-3">Over mij</p>
+        <h2 class="font-display text-4xl font-bold text-white mb-2">Welkom in de wereld<br><span class="italic text-mystic-purple-light">van Madam CORINA</span></h2>
+        <div class="gold-divider" style="margin-left:0;"></div>
+        <p class="text-mystic-muted mt-6 leading-relaxed mb-4">
+          Welkom bij Madam CORINA, dé plek voor mensen die op zoek zijn naar inzicht in hun heden, verleden en toekomst. Laat mijn gaven als waarzegster je begeleiden op je spirituele reis.
+        </p>
+        <p class="text-mystic-muted leading-relaxed mb-4">
+          Ontdek verborgen patronen, maak verbinding met je innerlijke zelf en krijg helderheid over je levenspad. Samen kunnen we de antwoorden vinden die je zoekt en je helpen bij het nemen van belangrijke beslissingen.
+        </p>
+        <p class="text-mystic-muted leading-relaxed mb-8">
+          Ik ben Madam CORINA — een waarzegster die een gezellige sfeer creëert. Kom genieten van een unieke ervaring vol toekomstige mogelijkheden. Bij Corina mogen haar gasten actief meedoen tijdens het consult.
+        </p>
+        <a href="diensten.html" class="btn-gold">Ontdek mijn diensten</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DRIE PILAREN -->
+  <section class="py-16 px-6 fade-in">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glow-card rounded-lg p-8 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-10 h-10 text-mystic-purple-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-3">Mistieke ervaringen</h3>
+          <p class="text-mystic-muted text-sm leading-relaxed">Bij Corina is de sfeer magisch mistiek maar ook heel gezellig. Een unieke beleving die je bijblijft.</p>
+        </div>
+        <div class="glow-card rounded-lg p-8 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-10 h-10 text-mystic-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-3">Boeiende belevenis</h3>
+          <p class="text-mystic-muted text-sm leading-relaxed">Laat je meeslepen in een zoektocht naar de positieve mogelijkheden die in jezelf verscholen liggen.</p>
+        </div>
+        <div class="glow-card rounded-lg p-8 text-center">
+          <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+            <svg class="w-10 h-10 text-mystic-purple-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white mb-3">Gezellige drukte</h3>
+          <p class="text-mystic-muted text-sm leading-relaxed">Bij het bolderkarretje van Corina voor uw zomers buiten evenement. Altijd een publiekstrekker!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIENSTEN PREVIEW -->
+  <section class="py-24 px-6 fade-in">
+    <div class="max-w-6xl mx-auto text-center mb-16">
+      <p class="text-mystic-gold text-xs tracking-[0.3em] uppercase mb-3">Wat ik bied</p>
+      <h2 class="font-display text-4xl font-bold text-white">Mystieke <span class="italic text-mystic-purple-light">Diensten</span></h2>
+      <div class="gold-divider"></div>
+      <p class="text-mystic-muted mt-6 max-w-xl mx-auto">Voor elk evenement de perfecte mystieke touch — van intieme theelees-sessies tot drukke buitenevenementen.</p>
+    </div>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- Waarzegster -->
+      <a href="diensten.html" class="glow-card rounded-lg p-6 cursor-pointer block">
+        <div class="mb-4">
+          <img src="images/corina-show.jpg" alt="Waarzegster" class="w-full h-36 object-cover rounded opacity-80">
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Waarzegster</h3>
+        <p class="text-mystic-muted text-sm">Handlijnlezen, tarotkaarten en helderziendheid. Laat je verrassen door wat de toekomst brengt.</p>
+      </a>
+      <!-- Theelezen -->
+      <a href="diensten.html" class="glow-card rounded-lg p-6 cursor-pointer block">
+        <div class="mb-4">
+          <img src="images/waarzegster-kraampje.jpg" alt="Theelezen" class="w-full h-36 object-cover rounded opacity-80">
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Theelezen</h3>
+        <p class="text-mystic-muted text-sm">Speciaal kraampje voor theelezen — boeiend, gezellig en heel interactief. Gasten doen actief mee.</p>
+      </a>
+      <!-- Kraampje / Animatie -->
+      <a href="diensten.html" class="glow-card rounded-lg p-6 cursor-pointer block">
+        <div class="mb-4">
+          <img src="images/orientaals-decor.jpg" alt="Evenement animatie" class="w-full h-36 object-cover rounded opacity-80">
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Evenement animatie</h3>
+        <p class="text-mystic-muted text-sm">Animaties en mystiek decor voor uw feest, markt of bedrijfsevent. Sfeermakers die bijblijven.</p>
+      </a>
+      <!-- Tattoo -->
+      <a href="diensten.html" class="glow-card rounded-lg p-6 cursor-pointer block">
+        <div class="mb-4">
+          <img src="images/foto-corina-2.jpg" alt="Henna tattoo" class="w-full h-36 object-cover rounded opacity-80">
+        </div>
+        <h3 class="font-display text-lg font-bold text-white mb-2">Henna Tattoo's</h3>
+        <p class="text-mystic-muted text-sm">Prachtige henna decoraties — een extra mystieke beleving voor uw gasten.</p>
+      </a>
+    </div>
+    <div class="text-center mt-12">
+      <a href="diensten.html" class="btn-mystic">Alle diensten bekijken</a>
+    </div>
+  </section>
+
+  <!-- FOTO SFEER -->
+  <section class="py-24 px-6 fade-in" style="background: linear-gradient(180deg, #0D0A1A 0%, #160D2A 50%, #0D0A1A 100%);">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <p class="text-mystic-gold text-xs tracking-[0.3em] uppercase mb-3">Sfeer & Beleving</p>
+      <h2 class="font-display text-4xl font-bold text-white">Een blik <span class="italic text-mystic-purple-light">achter de sluier</span></h2>
+      <div class="gold-divider"></div>
+    </div>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3">
+      <div class="cursor-pointer overflow-hidden rounded-lg aspect-square lightbox-trigger" data-img="images/madam-corine.jpg">
+        <img src="images/madam-corine.jpg" alt="Madam Corina" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 opacity-85 hover:opacity-100">
+      </div>
+      <div class="cursor-pointer overflow-hidden rounded-lg aspect-square lightbox-trigger" data-img="images/show-decor.jpg">
+        <img src="images/show-decor.jpg" alt="Sfeer decoratie" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 opacity-85 hover:opacity-100">
+      </div>
+      <div class="cursor-pointer overflow-hidden rounded-lg aspect-square lightbox-trigger" data-img="images/corina-waarzegster.jpg">
+        <img src="images/corina-waarzegster.jpg" alt="Corina waarzegster" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 opacity-85 hover:opacity-100">
+      </div>
+      <div class="cursor-pointer overflow-hidden rounded-lg aspect-square lightbox-trigger" data-img="images/corina-show.jpg">
+        <img src="images/corina-show.jpg" alt="Corina show" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 opacity-85 hover:opacity-100">
+      </div>
+      <div class="cursor-pointer overflow-hidden rounded-lg aspect-square lightbox-trigger" data-img="images/corina-medallion.jpg">
+        <img src="images/corina-medallion.jpg" alt="Corina medallion" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 opacity-85 hover:opacity-100">
+      </div>
+      <div class="cursor-pointer overflow-hidden rounded-lg aspect-square lightbox-trigger" data-img="images/waarzegster-kraampje.jpg">
+        <img src="images/waarzegster-kraampje.jpg" alt="Waarzegster kraampje" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500 opacity-85 hover:opacity-100">
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="galerij.html" class="btn-gold">Bekijk alle foto's</a>
+    </div>
+  </section>
+
+  <!-- CTA SECTIE -->
+  <section class="py-24 px-6 fade-in" style="background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(124,58,237,0.15) 0%, transparent 70%);">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-mystic-gold text-xs tracking-[0.3em] uppercase mb-3">✦ Klaar voor de mystiek ✦</p>
+      <h2 class="font-display text-4xl font-bold text-white mb-4">Boek Madam CORINA<br><span class="italic text-mystic-purple-light">voor uw evenement</span></h2>
+      <div class="gold-divider"></div>
+      <p class="text-mystic-muted mt-6 mb-10 leading-relaxed">
+        Voor vragen en/of boekingen kunt u contact opnemen. Madam CORINA is beschikbaar voor alle soorten evenementen — van privéfeesten tot grote buitenmarkten.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.html" class="btn-mystic">Neem contact op</a>
+        <a href="tel:+31412644211" class="btn-gold">
+          <svg class="w-4 h-4 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+          0412 644 211
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-mystic-purple/20 py-12 px-6" style="background: #0A0815;">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+      <div>
+        <p class="font-display text-lg font-bold text-mystic-gold-light mb-3">Madam <span class="text-mystic-purple-light">CORINA</span></p>
+        <p class="text-mystic-muted text-sm leading-relaxed">Mystieke waarzegster met passie voor alle evenementen. Handlijnlezen, theelezen, tarot en meer.</p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-4 text-sm tracking-wide">DIENSTEN</p>
+        <ul class="space-y-2 text-mystic-muted text-sm">
+          <li><a href="diensten.html" class="hover:text-mystic-gold-light transition-colors cursor-pointer">Waarzegster</a></li>
+          <li><a href="diensten.html" class="hover:text-mystic-gold-light transition-colors cursor-pointer">Theelezen</a></li>
+          <li><a href="diensten.html" class="hover:text-mystic-gold-light transition-colors cursor-pointer">Henna Tattoo's</a></li>
+          <li><a href="diensten.html" class="hover:text-mystic-gold-light transition-colors cursor-pointer">Evenement Animatie</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-4 text-sm tracking-wide">CONTACT</p>
+        <ul class="space-y-2 text-mystic-muted text-sm">
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 mt-0.5 text-mystic-purple-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>Dorpstraat 18, 5367 AL Macharen</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-mystic-purple-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 7V5z"/></svg>
+            <a href="tel:+31412644211" class="hover:text-mystic-gold-light cursor-pointer">0412 644 211</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-mystic-purple-light shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="mailto:1duizend1nacht@gmail.com" class="hover:text-mystic-gold-light cursor-pointer">1duizend1nacht@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-10 pt-6 border-t border-mystic-purple/10 flex flex-col md:flex-row justify-between items-center gap-3">
+      <p class="text-mystic-muted text-xs">© 2025 Madam CORINA — Oriental Shows</p>
+      <p class="text-mystic-muted text-xs">Gebouwd door <a href="https://www.code-lieshout.nl" class="text-mystic-purple-light hover:text-mystic-gold-light cursor-pointer transition-colors">Code Lieshout</a></p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="document.getElementById('lightbox').classList.remove('open')">
+    <img id="lightbox-img" src="" alt="Foto">
+  </div>
+
+  <script>
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Lightbox
+    document.querySelectorAll('.lightbox-trigger').forEach(el => {
+      el.addEventListener('click', () => {
+        document.getElementById('lightbox-img').src = el.dataset.img;
+        document.getElementById('lightbox').classList.add('open');
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
+    });
+  </script>
+</body>
+</html>

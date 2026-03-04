@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diensten van Madam CORINA — Waarzegster, theelezen, handlijnlezen, henna tattoo's en evenement animaties voor uw feest of markt.">
+  <title>Diensten — Madam CORINA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="03cb43d6-4e2f-4b84-89a7-b53842b485e1"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { 'mystic-bg': '#0D0A1A', 'mystic-dark': '#160D2A', 'mystic-card': '#1E1230', 'mystic-purple': '#7C3AED', 'mystic-purple-light': '#A78BFA', 'mystic-gold': '#CA8A04', 'mystic-gold-light': '#FDE68A', 'mystic-text': '#E8E0F0', 'mystic-muted': '#9D8FB5' }, fontFamily: { 'display': ['"Playfair Display"', 'serif'], 'body': ['Poppins', 'sans-serif'] } } }
+    }
+  </script>
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3, .font-display { font-family: 'Playfair Display', serif; }
+    body { background: #0D0A1A; color: #E8E0F0; }
+    .glow-card { background: linear-gradient(135deg, #1E1230, #160D2A); border: 1px solid rgba(124,58,237,0.3); box-shadow: 0 0 20px rgba(124,58,237,0.1), inset 0 1px 0 rgba(255,255,255,0.05); transition: all 0.3s ease; }
+    .glow-card:hover { border-color: rgba(202,138,4,0.5); box-shadow: 0 0 30px rgba(202,138,4,0.15), 0 0 60px rgba(124,58,237,0.1); transform: translateY(-3px); }
+    .gold-divider { width: 60px; height: 2px; background: linear-gradient(90deg, transparent, #CA8A04, transparent); margin: 1rem auto; }
+    .btn-mystic { background: linear-gradient(135deg, #7C3AED, #9D5BF0); color: white; padding: 14px 32px; border-radius: 4px; font-weight: 600; letter-spacing: 0.05em; cursor: pointer; border: 1px solid rgba(167,139,250,0.4); box-shadow: 0 0 20px rgba(124,58,237,0.4); transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+    .btn-mystic:hover { box-shadow: 0 0 30px rgba(124,58,237,0.6); transform: translateY(-2px); }
+    .navbar { background: rgba(13,10,26,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(124,58,237,0.2); }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+  </style>
+</head>
+<body>
+  <nav class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-display text-xl font-bold text-yellow-200 tracking-wide">Madam <span class="text-purple-400">CORINA</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="index.html" class="text-mystic-text hover:text-yellow-200 transition-colors cursor-pointer">Home</a>
+        <a href="diensten.html" class="text-yellow-200 cursor-pointer">Diensten</a>
+        <a href="galerij.html" class="text-mystic-text hover:text-yellow-200 transition-colors cursor-pointer">Galerij</a>
+        <a href="contact.html" class="btn-mystic text-sm py-2 px-5">Boek een optreden</a>
+      </div>
+      <button class="md:hidden cursor-pointer p-2" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden px-6 pb-4 border-t border-purple-900/40 bg-mystic-bg">
+      <a href="index.html" class="block py-3 text-white">Home</a>
+      <a href="diensten.html" class="block py-3 text-yellow-200">Diensten</a>
+      <a href="galerij.html" class="block py-3 text-white">Galerij</a>
+      <a href="contact.html" class="block py-3 text-yellow-300 font-semibold">Boek een optreden</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="relative pt-32 pb-16 px-6 text-center overflow-hidden">
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(124,58,237,0.2) 0%, transparent 70%);"></div>
+    <div class="relative z-10">
+      <p class="text-yellow-400 text-xs tracking-[0.3em] uppercase mb-3">✦ Wat ik bied ✦</p>
+      <h1 class="font-display text-5xl font-bold text-white mb-2">Mystieke <span class="italic text-purple-400">Diensten</span></h1>
+      <div class="gold-divider"></div>
+      <p class="text-purple-200/70 mt-6 max-w-xl mx-auto">Van intieme consultaties tot sfeervolle evenement animaties — Madam CORINA brengt het occulte tot leven op uw feest of markt.</p>
+    </div>
+  </section>
+
+  <!-- DIENSTEN DETAIL -->
+  <section class="pb-24 px-6 fade-in">
+    <div class="max-w-6xl mx-auto space-y-16">
+
+      <!-- Waarzegster -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="relative">
+          <div class="absolute -inset-2 bg-purple-900/20 rounded-lg blur-xl"></div>
+          <img src="images/corina-waarzegster.jpg" alt="Waarzegster Corina" class="relative rounded-lg w-full object-cover border border-purple-800/30" style="max-height:400px; object-fit:cover;">
+        </div>
+        <div>
+          <p class="text-yellow-400 text-xs tracking-[0.3em] uppercase mb-2">Dienst 01</p>
+          <h2 class="font-display text-3xl font-bold text-white mb-3">Waarzegster & <span class="italic text-purple-400">Helderziende</span></h2>
+          <div class="gold-divider" style="margin-left:0;"></div>
+          <p class="text-purple-200/70 mt-5 leading-relaxed mb-4">Welkom bij Madam CORINA, dé plek voor mensen die op zoek zijn naar inzicht in hun heden, verleden en toekomst. Laat mijn gaven als waarzegster je begeleiden op je spirituele reis.</p>
+          <p class="text-purple-200/70 leading-relaxed mb-6">Ontdek verborgen patronen, maak verbinding met je innerlijke zelf en krijg helderheid over je levenspad. Samen kunnen we de antwoorden vinden die je zoekt. Bij Corina mogen haar gasten actief meedoen tijdens het consult.</p>
+          <a href="contact.html" class="btn-mystic">Boek dit optreden</a>
+        </div>
+      </div>
+
+      <!-- Theelezen -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="order-2 md:order-1">
+          <p class="text-yellow-400 text-xs tracking-[0.3em] uppercase mb-2">Dienst 02</p>
+          <h2 class="font-display text-3xl font-bold text-white mb-3">Thee-barretje & <span class="italic text-purple-400">Theelezen</span></h2>
+          <div class="gold-divider" style="margin-left:0;"></div>
+          <p class="text-purple-200/70 mt-5 leading-relaxed mb-4">Nu ook een speciaal kraampje voor theelezen — boeiend en heel gezellig. Een unieke ervaring waarbij gasten actief meedoen. Laat je vertellen wat de bladeren voor jou verbergen.</p>
+          <p class="text-purple-200/70 leading-relaxed mb-6">Perfect voor een privéfeest, borrel of markt. Het thee-barretje trekt altijd een groepje nieuwsgierige bezoekers.</p>
+          <a href="contact.html" class="btn-mystic">Boek dit optreden</a>
+        </div>
+        <div class="order-1 md:order-2 relative">
+          <div class="absolute -inset-2 bg-yellow-900/10 rounded-lg blur-xl"></div>
+          <img src="images/waarzegster-kraampje.jpg" alt="Theelezen kraampje" class="relative rounded-lg w-full object-cover border border-purple-800/30" style="max-height:400px; object-fit:cover;">
+        </div>
+      </div>
+
+      <!-- Evenement animatie -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="relative">
+          <div class="absolute -inset-2 bg-purple-900/20 rounded-lg blur-xl"></div>
+          <img src="images/corina-show.jpg" alt="Evenement animatie" class="relative rounded-lg w-full object-cover border border-purple-800/30" style="max-height:400px; object-fit:cover;">
+        </div>
+        <div>
+          <p class="text-yellow-400 text-xs tracking-[0.3em] uppercase mb-2">Dienst 03</p>
+          <h2 class="font-display text-3xl font-bold text-white mb-3">Evenement <span class="italic text-purple-400">Animaties</span></h2>
+          <div class="gold-divider" style="margin-left:0;"></div>
+          <p class="text-purple-200/70 mt-5 leading-relaxed mb-4">Laat je meeslepen in een zoektocht naar de positieve mogelijkheden die in jezelf verscholen liggen. Madam CORINA is voor alle evenementen beschikbaar — van intieme privéfeesten tot grote buiten markten.</p>
+          <p class="text-purple-200/70 leading-relaxed mb-6">Bij het bolderkarretje van Corina voor uw zomers buiten evenement — altijd een publiekstrekker met een gezellige drukte.</p>
+          <a href="contact.html" class="btn-mystic">Boek dit optreden</a>
+        </div>
+      </div>
+
+      <!-- Henna Tattoo -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="order-2 md:order-1">
+          <p class="text-yellow-400 text-xs tracking-[0.3em] uppercase mb-2">Dienst 04</p>
+          <h2 class="font-display text-3xl font-bold text-white mb-3">Henna <span class="italic text-purple-400">Tattoo's</span></h2>
+          <div class="gold-divider" style="margin-left:0;"></div>
+          <p class="text-purple-200/70 mt-5 leading-relaxed mb-4">Een extra mystieke beleving voor uw gasten — prachtige henna decoraties in oriëntaalse stijl. Uniek, tijdelijk en altijd een gespreksstuk op elk evenement.</p>
+          <a href="contact.html" class="btn-mystic">Boek dit optreden</a>
+        </div>
+        <div class="order-1 md:order-2 relative">
+          <div class="absolute -inset-2 bg-yellow-900/10 rounded-lg blur-xl"></div>
+          <img src="images/foto-corina-2.jpg" alt="Henna tattoo" class="relative rounded-lg w-full object-cover border border-purple-800/30" style="max-height:400px; object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-purple-900/30 py-12 px-6" style="background:#0A0815;">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="font-display text-lg font-bold text-yellow-200">Madam <span class="text-purple-400">CORINA</span></p>
+      <div class="flex gap-6 text-sm text-purple-300/60">
+        <a href="index.html" class="hover:text-yellow-200 transition-colors cursor-pointer">Home</a>
+        <a href="diensten.html" class="hover:text-yellow-200 transition-colors cursor-pointer">Diensten</a>
+        <a href="galerij.html" class="hover:text-yellow-200 transition-colors cursor-pointer">Galerij</a>
+        <a href="contact.html" class="hover:text-yellow-200 transition-colors cursor-pointer">Contact</a>
+      </div>
+      <p class="text-purple-300/40 text-xs">Gebouwd door <a href="https://www.code-lieshout.nl" class="text-purple-400 hover:text-yellow-200 cursor-pointer transition-colors">Code Lieshout</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
